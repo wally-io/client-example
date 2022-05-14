@@ -1,0 +1,8 @@
+// Import Main styles for this application
+@import 'src/scss/style';
+
+.App {
+  display:flex;
+  flex-direction:column;
+  height: 100%;
+}
