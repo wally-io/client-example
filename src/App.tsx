@@ -12,7 +12,7 @@ function App() {
     useEffect(() => {
         Http.post(domain!, "/auth/login", null, {email: "admin@rct.ai", password: "admin123"}, (response: any) => {
             localStorage.setItem("token", response.token)
-            Http.get(domain!, "/wallet/dapp/connect/link", response.token, {dappId: "fa94d55a-00fb-41a4-b58a-d50b12092a87", appUserIdentifier: "admin"}, (response: any) => {
+            Http.get(domain!, "/wallet/dapp/connect/link", response.token, {dappId: "fa94d55a-00fb-41a4-b58a-d50b12092a87", dappUserIdentifier: "admin"}, (response: any) => {
                 setDappRegistrationLink(response.path)
             }, (error) => {
                 console.error(error)
